@@ -125,7 +125,7 @@ export default function BrazilianJiuJitsuPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">The Gentle Art</h2>
               <p className="text-lg text-gray-600 mb-6">
                 Brazilian Jiu-Jitsu is a martial art, self-defense system, and combat sport that teaches you to overcome bigger, stronger opponents through technique, leverage, and timing rather than strength and size.
-              </p>
+              </p>f
               <p className="text-lg text-gray-600 mb-6">
                 At Renzo Gracie Pearland, we teach authentic Brazilian Jiu-Jitsu under the legendary Renzo Gracie lineage, ensuring you receive world-class instruction and techniques that have been proven in both sport and self-defense scenarios.
               </p>
@@ -142,7 +142,7 @@ export default function BrazilianJiuJitsuPage() {
             </div>
             <div>
               <img
-                src="https://renzograciepearland.com/wp-content/uploads/2023/07/IMG_3508.jpg"
+                src="https://renzograciepearland.com/wp-content/uploads/2023/07/IMG_3319.jpg"
                 alt="Brazilian Jiu-Jitsu Training"
                 className="rounded-lg shadow-lg w-full"
               />
