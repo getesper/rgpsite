@@ -130,7 +130,7 @@ export default function AdultProgramPage() {
             </div>
             <div>
               <img
-                src="https://renzograciepearland.com/wp-content/uploads/2023/07/IMG_3508.jpg"
+                src="https://renzograciepearland.com/wp-content/uploads/2023/07/IMG_3319.jpg"
                 alt="Adult BJJ Training"
                 className="rounded-lg shadow-lg w-full"
               />
