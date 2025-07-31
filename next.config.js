@@ -2,6 +2,9 @@
 const nextConfig = {
   output: 'export',
   distDir: 'out',
+  // Uncomment and update these lines if your repo is not at the root of GitHub Pages
+  // basePath: '/rgpsite',
+  // assetPrefix: '/rgpsite/',
   allowedDevOrigins: ["*.preview.same-app.com"],
   images: {
     unoptimized: true,
