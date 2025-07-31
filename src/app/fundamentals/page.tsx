@@ -9,19 +9,78 @@ export default function FundamentalsPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Header - simplified */}
+      {/* Header */}
       <header className="bg-white shadow-sm relative z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            <Link href="/">
-              <img
-                src="http://renzograciepearland.com/wp-content/uploads/2024/01/RGPLOGO1.jpg"
-                alt="Renzo Gracie Pearland"
-                className="h-12 w-auto"
-              />
-            </Link>
+            <div className="flex items-center">
+              <Link href="/">
+                <img
+                  src="http://renzograciepearland.com/wp-content/uploads/2024/01/RGPLOGO1.jpg"
+                  alt="Renzo Gracie Pearland"
+                  className="h-12 w-auto cursor-pointer"
+                />
+              </Link>
+            </div>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex space-x-8">
+              <Link href="/" className="nav-link text-gray-900 hover:text-blue-600 font-medium transition-colors">HOME</Link>
+              <Link href="/about" className="nav-link text-gray-900 hover:text-blue-600 font-medium transition-colors">ABOUT US</Link>
+              <Link href="/team" className="nav-link text-gray-900 hover:text-blue-600 font-medium transition-colors">OUR TEAM</Link>
+              <Link href="/schedule" className="nav-link text-gray-900 hover:text-blue-600 font-medium transition-colors">SCHEDULE</Link>
+              <Link href="/gallery" className="nav-link text-gray-900 hover:text-blue-600 font-medium transition-colors">GALLERY</Link>
+              <Link href="/book" className="nav-link text-blue-600 font-medium hover:text-blue-700">BOOK NOW</Link>
+              <Link href="/members" className="nav-link text-gray-900 hover:text-blue-600 font-medium transition-colors">MEMBER LOGIN</Link>
+              <a href="#contact" className="nav-link text-gray-900 hover:text-blue-600 font-medium transition-colors">CONTACT</a>
+            </nav>
+
+            {/* Contact Info & Social */}
+            <div className="hidden lg:flex items-center space-x-4">
+              <div className="flex items-center text-gray-600">
+                <Phone className="h-4 w-4 mr-2" />
+                <a href="tel:+18324589839" className="text-sm hover:text-blue-600 transition-colors cursor-pointer">(832) 458-9839</a>
+              </div>
+              <div className="flex space-x-2">
+                <a href="https://www.facebook.com/RenzoGraciePearland" target="_blank" rel="noopener noreferrer">
+                  <Facebook className="h-5 w-5 text-blue-600 cursor-pointer hover:text-blue-700" />
+                </a>
+                <a href="https://www.instagram.com/renzograciepearland" target="_blank" rel="noopener noreferrer">
+                  <Instagram className="h-5 w-5 text-pink-600 cursor-pointer hover:text-pink-700" />
+                </a>
+                <a href="https://twitter.com/RGPearland" target="_blank" rel="noopener noreferrer">
+                  <Twitter className="h-5 w-5 text-blue-400 cursor-pointer hover:text-blue-500" />
+                </a>
+              </div>
+            </div>
+
+            {/* Mobile menu button */}
+            <div className="lg:hidden">
+              <button
+                type="button"
+                className="text-gray-900"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              >
+                {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </button>
+            </div>
           </div>
         </div>
+
+        {/* Mobile menu */}
+        {mobileMenuOpen && (
+          <div className="lg:hidden bg-white border-t">
+            <div className="px-4 py-2 space-y-2">
+              <Link href="/" className="block py-2 text-gray-900 hover:text-blue-600">HOME</Link>
+              <Link href="/about" className="block py-2 text-gray-900 hover:text-blue-600">ABOUT US</Link>
+              <Link href="/team" className="block py-2 text-gray-900 hover:text-blue-600">OUR TEAM</Link>
+              <Link href="/schedule" className="block py-2 text-gray-900 hover:text-blue-600">SCHEDULE</Link>
+              <Link href="/gallery" className="block py-2 text-gray-900 hover:text-blue-600">GALLERY</Link>
+              <Link href="/book" className="block py-2 text-blue-600 font-medium">BOOK NOW</Link>
+              <Link href="/members" className="block py-2 text-gray-900 hover:text-blue-600">MEMBER LOGIN</Link>
+            </div>
+          </div>
+        )}
       </header>
 
       {/* Subheader Navigation */}
@@ -195,10 +254,67 @@ export default function FundamentalsPage() {
         </div>
       </section>
 
-      {/* Footer - simplified */}
+      {/* Footer */}
       <footer className="bg-blue-900 text-white py-8">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <p>&copy; 2024 Renzo Gracie Academy Pearland. All rights reserved.</p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <img
+                src="https://renzograciepearland.com/wp-content/uploads/2023/07/Renzopearland-white-logo.png"
+                alt="Renzo Gracie Pearland"
+                className="h-12 w-auto mb-4"
+              />
+              <p className="text-gray-300 text-sm">
+                Building champions on and off the mats in Pearland, Texas.
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-bold mb-4">Quick Links</h4>
+              <div className="space-y-2 text-sm">
+                <Link href="/" className="block text-gray-300 hover:text-white transition-colors">Home</Link>
+                <Link href="/about" className="block text-gray-300 hover:text-white transition-colors">About Us</Link>
+                <Link href="/team" className="block text-gray-300 hover:text-white transition-colors">Our Team</Link>
+                <Link href="/schedule" className="block text-gray-300 hover:text-white transition-colors">Class Schedule</Link>
+                <Link href="/gallery" className="block text-gray-300 hover:text-white transition-colors">Gallery</Link>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="font-bold mb-4">Programs</h4>
+              <div className="space-y-2 text-sm">
+                <Link href="/brazilian-jiu-jitsu" className="block text-gray-300 hover:text-white transition-colors">Brazilian Jiu-Jitsu</Link>
+                <Link href="/youth-program" className="block text-gray-300 hover:text-white transition-colors">Youth Program</Link>
+                <Link href="/mma-training" className="block text-gray-300 hover:text-white transition-colors">MMA Training</Link>
+                <Link href="/adult-program" className="block text-gray-300 hover:text-white transition-colors">Adult Program</Link>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="font-bold mb-4">Contact Info</h4>
+              <div className="text-gray-300 space-y-2">
+                <p>2000 Reflection Bay Dr Suite 164</p>
+                <p>Pearland, TX 77584</p>
+                <p>Phone: <a href="tel:+18324589839" className="hover:text-white transition-colors cursor-pointer">(832) 458-9839</a></p>
+                <p>Email: <a href="mailto:renzograciepearland@gmail.com" className="hover:text-white transition-colors cursor-pointer">renzograciepearland@gmail.com</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-blue-800 mt-8 pt-6 text-center text-gray-300 text-sm">
+            <div className="flex justify-center space-x-6 mb-4">
+              <a href="https://www.facebook.com/RenzoGraciePearland" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <Facebook className="h-6 w-6 text-gray-300 hover:text-white cursor-pointer" />
+              </a>
+              <a href="https://www.instagram.com/renzograciepearland" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <Instagram className="h-6 w-6 text-gray-300 hover:text-white cursor-pointer" />
+              </a>
+              <a href="https://twitter.com/RGPearland" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <Twitter className="h-6 w-6 text-gray-300 hover:text-white cursor-pointer" />
+              </a>
+            </div>
+            <p>&copy; 2024 Renzo Gracie Academy Pearland. All rights reserved.</p>
+          </div>
         </div>
       </footer>
     </div>

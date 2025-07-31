@@ -75,7 +75,21 @@ export default function About() {
         </div>
       </header>
 
-      {/* Hero Section */}
+      {/* Subheader Navigation */}
+      <nav className="bg-blue-900 text-white py-3">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-center space-x-8 overflow-x-auto">
+            <Link href="/brazilian-jiu-jitsu" className="whitespace-nowrap hover:text-blue-300 transition-colors">Brazilian Jiu-Jitsu</Link>
+            <Link href="/youth-program" className="whitespace-nowrap hover:text-blue-300 transition-colors">Youth Program</Link>
+            <Link href="/mma-training" className="whitespace-nowrap hover:text-blue-300 transition-colors">MMA Training</Link>
+            <Link href="/adult-program" className="whitespace-nowrap hover:text-blue-300 transition-colors">Adult Program</Link>
+            <Link href="/fundamentals" className="whitespace-nowrap hover:text-blue-300 transition-colors">Fundamentals</Link>
+            <Link href="/competition-team" className="whitespace-nowrap hover:text-blue-300 transition-colors">Competition Team</Link>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section */>
       <section className="relative h-96 bg-cover bg-center" style={{
         backgroundImage: 'url(https://ext.same-assets.com/2040022501/2089230064.jpeg)'
       }}>

@@ -16,6 +16,7 @@ export default function Schedule() {
         { time: '5:30 PM', program: 'Youth BJJ', level: 'Ages 4-12', instructor: 'Professor Ben Poppelaars' },
         { time: '6:30 PM', program: 'Brazilian Jiu-Jitsu', level: 'All Levels', instructor: 'Professor Joe Murphy' },
         { time: '7:30 PM', program: 'Muay Thai', level: 'Advanced', instructor: 'Professor Ben Poppelaars' },
+        { time: '8:00 PM', program: 'MMA Training', level: 'Advanced', instructor: 'Professor Joe Murphy' },
       ]
     },
     {
@@ -25,6 +26,7 @@ export default function Schedule() {
         { time: '5:30 PM', program: 'Kids Martial Arts', level: 'Ages 8-12', instructor: 'Professor Ben Poppelaars' },
         { time: '6:30 PM', program: 'Brazilian Jiu-Jitsu', level: 'Fundamentals', instructor: 'Professor Ki Martin' },
         { time: '7:30 PM', program: 'Muay Thai', level: 'All Levels', instructor: 'Professor Ben Poppelaars' },
+        { time: '7:30 PM', program: 'MMA Training', level: 'Fundamentals', instructor: 'Professor Joe Murphy' },
       ]
     },
     {
@@ -35,6 +37,7 @@ export default function Schedule() {
         { time: '5:30 PM', program: 'Youth BJJ', level: 'Ages 4-12', instructor: 'Professor Ben Poppelaars' },
         { time: '6:30 PM', program: 'Brazilian Jiu-Jitsu', level: 'All Levels', instructor: 'Professor Joe Murphy' },
         { time: '7:30 PM', program: 'Teen Program', level: 'Ages 13-16', instructor: 'Professor Ki Martin' },
+        { time: '8:00 PM', program: 'Competition Team', level: 'Advanced', instructor: 'Professor Joe Murphy' },
       ]
     },
     {
@@ -44,6 +47,7 @@ export default function Schedule() {
         { time: '5:30 PM', program: 'Kids Martial Arts', level: 'Ages 8-12', instructor: 'Professor Ben Poppelaars' },
         { time: '6:30 PM', program: 'Brazilian Jiu-Jitsu', level: 'Competition', instructor: 'Professor Joe Murphy' },
         { time: '7:30 PM', program: 'MMA Training', level: 'Advanced', instructor: 'Professor Joe Murphy' },
+        { time: '7:30 PM', program: 'MMA Training', level: 'Fundamentals', instructor: 'Professor Joe Murphy' },
       ]
     },
     {
@@ -53,15 +57,18 @@ export default function Schedule() {
         { time: '12:00 PM', program: 'Open Mat', level: 'All Levels', instructor: 'Supervised Training' },
         { time: '6:00 PM', program: "Women's Self Defense", level: 'FREE CLASS', instructor: 'Professor Lauren Murphy' },
         { time: '7:00 PM', program: 'Brazilian Jiu-Jitsu', level: 'All Levels', instructor: 'Professor Lauren Murphy' },
+        { time: '7:00 PM', program: 'Competition Team', level: 'Advanced', instructor: 'Professor Joe Murphy' },
       ]
     },
     {
       day: 'Saturday',
       classes: [
-        { time: '10:00 AM', program: 'Kids Martial Arts', level: 'Ages 8-12', instructor: 'Professor Ben Poppelaars' },
-        { time: '11:00 AM', program: 'Teen Program', level: 'Ages 13-16', instructor: 'Professor Ki Martin' },
+        { time: '10:00 AM', program: 'Kids Martial Arts', level: 'Ages 4-8', instructor: 'Professor Ben Poppelaars' },
+        { time: '11:00 AM', program: 'Teen Program', level: 'Ages 9-12', instructor: 'Professor Ki Martin' },
         { time: '12:00 PM', program: 'Brazilian Jiu-Jitsu', level: 'All Levels', instructor: 'Professor Joe Murphy' },
         { time: '1:00 PM', program: 'Open Mat', level: 'All Levels', instructor: 'Supervised Training' },
+        { time: '2:00 PM', program: 'MMA Training', level: 'Fundamentals', instructor: 'Professor Joe Murphy' },
+        { time: '3:00 PM', program: 'Competition Team', level: 'Advanced', instructor: 'Professor Joe Murphy' },
       ]
     },
     {
@@ -69,6 +76,7 @@ export default function Schedule() {
       classes: [
         { time: '11:00 AM', program: 'Open Mat', level: 'All Levels', instructor: 'Supervised Training' },
         { time: '12:00 PM', program: 'Brazilian Jiu-Jitsu', level: 'Fundamentals', instructor: 'Professor Ki Martin' },
+        { time: '2:00 PM', program: 'Competition Team', level: 'Competition Prep', instructor: 'Professor Joe Murphy' },
       ]
     }
   ];
@@ -79,16 +87,18 @@ export default function Schedule() {
         return 'bg-blue-600 text-white';
       case 'muay thai':
         return 'bg-red-600 text-white';
-      case 'littles bjj':
+      case 'youth bjj':
         return 'bg-green-600 text-white';
       case 'kids martial arts':
         return 'bg-purple-600 text-white';
-      case 'teen martial arts':
+      case 'teen program':
         return 'bg-orange-600 text-white';
       case "women's self defense":
         return 'bg-pink-600 text-white';
       case 'open mat':
         return 'bg-gray-600 text-white';
+      case 'competition team':
+        return 'bg-yellow-600 text-white';
       default:
         return 'bg-gray-500 text-white';
     }
@@ -104,7 +114,7 @@ export default function Schedule() {
             <div className="flex items-center">
               <Link href="/">
                 <img
-                  src="https://renzograciepearland.com/wp-content/uploads/2024/01/RGPLOGO1.jpg"
+                  src="https://518stores.com/cdn/shop/collections/renzo_pnatherlogo_blank_1600x.png?v=1596651391"
                   alt="Renzo Gracie Pearland"
                   className="h-12 w-auto cursor-pointer"
                 />
@@ -161,6 +171,20 @@ export default function Schedule() {
           </div>
         </div>
       </header>
+
+      {/* Subheader Navigation */}
+      <nav className="bg-blue-900 text-white py-3">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-center space-x-8 overflow-x-auto">
+            <Link href="/brazilian-jiu-jitsu" className="whitespace-nowrap hover:text-blue-300 transition-colors">Brazilian Jiu-Jitsu</Link>
+            <Link href="/youth-program" className="whitespace-nowrap hover:text-blue-300 transition-colors">Youth Program</Link>
+            <Link href="/mma-training" className="whitespace-nowrap hover:text-blue-300 transition-colors">MMA Training</Link>
+            <Link href="/adult-program" className="whitespace-nowrap hover:text-blue-300 transition-colors">Adult Program</Link>
+            <Link href="/fundamentals" className="whitespace-nowrap hover:text-blue-300 transition-colors">Fundamentals</Link>
+            <Link href="/competition-team" className="whitespace-nowrap hover:text-blue-300 transition-colors">Competition Team</Link>
+          </div>
+        </div>
+      </nav>
 
       {/* Hero Section */}
       <section className="relative h-96 bg-cover bg-center" style={{
