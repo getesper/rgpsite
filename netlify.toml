@@ -8,5 +8,8 @@
 [build.environment]
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs" 
+# Handle client-side routing for Next.js static export
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200 
