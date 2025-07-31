@@ -130,7 +130,7 @@ export default function YouthProgramPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src="https://renzograciepearland.com/wp-content/uploads/2024/01/BellaChloe-1024x768.jpeg"
+                src="https://renzograciepearland.com/wp-content/uploads/2023/07/IMG_3508.jpg"
                 alt="Youth Jiu-Jitsu Training"
                 className="rounded-lg shadow-lg w-full"
               />
